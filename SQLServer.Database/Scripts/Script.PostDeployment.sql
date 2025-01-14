@@ -56,9 +56,9 @@ IF (SELECT COUNT(*) FROM TodoStatus) = 0
 -- TODOS
 IF (SELECT COUNT(*) FROM Todos) = 0
     BEGIN
-        INSERT INTO Todos (Id_Todo, TodoName, TodoDescription, TodoCreatedAt, TodoUpdatedAt, TodoFinishedAt, TodoIsClosed, TodoPriority, FK_TodoStatus)
+        INSERT INTO Todos (Id_Todo, TodoName, TodoDescription, TodoCreatedAt, TodoUpdatedAt, TodoFinishedAt, TodoIsClosed, TodoPriority, FK_TodoStatus, FK_User)
         VALUES
-                (@Todo1GUID, 'Angular', 'Mise en pratique de RXJS', GETDATE(), NULL, NULL, 0, 0, @TodoStatusPendingGUID),
-                (@Todo2GUID, 'Blazor Hybrid', 'Créer une app pour up mes skills en Anglais', GETDATE(), DATEADD(HOUR, 3, GETDATE()), NULL, 0, 1, @TodoStatusInProgressGUID),
-                (@Todo3GUID, 'C#', 'Apprendre la clean architecture', GETDATE(), NULL, '2025-01-26 00:00:00', 1, 0, @TodoStatusFinishedGUID)
+                (@Todo1GUID, 'Angular', 'Mise en pratique de RXJS', GETDATE(), NULL, NULL, 0, 0, @TodoStatusPendingGUID, @UserGUID),
+                (@Todo2GUID, 'Blazor Hybrid', 'Créer une app pour up mes skills en Anglais', GETDATE(), DATEADD(HOUR, 3, GETDATE()), NULL, 0, 1, @TodoStatusInProgressGUID, @UserGUID),
+                (@Todo3GUID, 'C#', 'Apprendre la clean architecture', GETDATE(), NULL, '2025-01-26 00:00:00', 1, 0, @TodoStatusFinishedGUID, @AdminGUID)
     END
