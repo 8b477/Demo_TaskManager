@@ -10,7 +10,6 @@ Modèle de script de post-déploiement
 --------------------------------------------------------------------------------------
 */
 
-
 -- VARIABLES
 DECLARE @UserGUID UNIQUEIDENTIFIER = NEWID()
 DECLARE @AdminGUID UNIQUEIDENTIFIER = NEWID()
@@ -26,29 +25,26 @@ DECLARE @Todo1GUID UNIQUEIDENTIFIER = NEWID()
 DECLARE @Todo2GUID UNIQUEIDENTIFIER = NEWID()
 DECLARE @Todo3GUID UNIQUEIDENTIFIER = NEWID()
 
-
-
 -- ROLES
-IF (SELECT * FROM Roles) = 0
+IF (SELECT COUNT(*) FROM Roles) = 0
     BEGIN
         INSERT INTO Roles (Id_Role, RoleName)
         VALUES 
-                (@RoleUserGUID,'User'),
-                (@RoleAdminGUID,'Admin')
+                (@RoleUserGUID, 'User'),
+                (@RoleAdminGUID, 'Admin')
     END
 
-
 -- USERS
-IF (SELECT * FROM Users) = 0
+IF (SELECT COUNT(*) FROM Users) = 0
     BEGIN
-        INSERT INTO Users (Id_User,UserName,Email,PasswordHash,FK_Role)
+        INSERT INTO Users (Id_User, UserName, Email, PasswordHash, FK_Role)
         VALUES
-                (@UserGUID, 'user', 'user@mail.be','Test1234*',@RoleUserGUID),
-                (@AdminGUID, 'admin', 'admin@mail.be','Test1234*',@RoleAdminGUID)
+                (@UserGUID, 'user', 'user@mail.be', 'Test1234*', @RoleUserGUID),
+                (@AdminGUID, 'admin', 'admin@mail.be', 'Test1234*', @RoleAdminGUID)
     END
 
 -- TODOSTATUS
-IF (SELECT * FROM TodoStatus) = 0
+IF (SELECT COUNT(*) FROM TodoStatus) = 0
     BEGIN
         INSERT INTO TodoStatus (Id_TodoStatus, TodoStatusName)
         VALUES
@@ -57,13 +53,12 @@ IF (SELECT * FROM TodoStatus) = 0
                 (@TodoStatusFinishedGUID, 'Finished')
     END
 
-
 -- TODOS
-IF (SELECT * FROM Todos) = 0
+IF (SELECT COUNT(*) FROM Todos) = 0
     BEGIN
         INSERT INTO Todos (Id_Todo, TodoName, TodoDescription, TodoCreatedAt, TodoUpdatedAt, TodoFinishedAt, TodoIsClosed, TodoPriority, FK_TodoStatus)
         VALUES
                 (@Todo1GUID, 'Angular', 'Mise en pratique de RXJS', GETDATE(), NULL, NULL, 0, 0, @TodoStatusPendingGUID),
-                (@Todo1GUID, 'Blazor Hybrid', 'Créer une app pour up mes skills en Anglais', GETDATE(), DATEADD(HOUR, 3, GETDATE()), NULL, 0, 1, @TodoStatusInProgressGUID),
-                (@Todo1GUID, 'C#', 'Apprendre la clean architecture', GETDATE(), NULL, '2025-01-26 00:00:00',1,0,@TodoStatusFinishedGUID)
+                (@Todo2GUID, 'Blazor Hybrid', 'Créer une app pour up mes skills en Anglais', GETDATE(), DATEADD(HOUR, 3, GETDATE()), NULL, 0, 1, @TodoStatusInProgressGUID),
+                (@Todo3GUID, 'C#', 'Apprendre la clean architecture', GETDATE(), NULL, '2025-01-26 00:00:00', 1, 0, @TodoStatusFinishedGUID)
     END
