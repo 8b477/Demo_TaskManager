@@ -8,5 +8,5 @@
     TodoIsClosed BIT NOT NULL DEFAULT 0,
     TodoUpdatedAt DATETIME,
     TodoPriority BIT NOT NULL DEFAULT 0,
-
+    FK_TodoStatus UNIQUEIDENTIFIER FOREIGN KEY REFERENCES TodoStatus(Id_TodoStatus) NOT NULL
 )
