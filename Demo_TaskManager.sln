@@ -19,8 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{90
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Database", "SQLServer.Database\SQLServer.Database.sqlproj", "{B5893D7E-D81B-44C7-B011-87450431478C}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Database", "SQLServer.Database\SQLServer.Database.sqlproj", "{29437F3F-C7D7-41DB-BE9B-BF3372064836}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,12 +51,6 @@ Global
 		{B5893D7E-D81B-44C7-B011-87450431478C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5893D7E-D81B-44C7-B011-87450431478C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B5893D7E-D81B-44C7-B011-87450431478C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{29437F3F-C7D7-41DB-BE9B-BF3372064836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29437F3F-C7D7-41DB-BE9B-BF3372064836}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29437F3F-C7D7-41DB-BE9B-BF3372064836}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{29437F3F-C7D7-41DB-BE9B-BF3372064836}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29437F3F-C7D7-41DB-BE9B-BF3372064836}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29437F3F-C7D7-41DB-BE9B-BF3372064836}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,8 +58,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F0725284-6BC2-40E0-AA52-809D0B07960D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{109288BA-C106-4CE8-AEE5-B13FC5131A1D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{B5893D7E-D81B-44C7-B011-87450431478C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{29437F3F-C7D7-41DB-BE9B-BF3372064836} = {90B91573-2B41-4A48-9825-E9226C2BA096}
+		{B5893D7E-D81B-44C7-B011-87450431478C} = {90B91573-2B41-4A48-9825-E9226C2BA096}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {583C828E-E517-45E6-8FC1-BC9E681404E5}
