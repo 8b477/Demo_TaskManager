@@ -6,7 +6,7 @@
     <Name>SQLServer.Database</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{b5893d7e-d81b-44c7-b011-87450431478c}</ProjectGuid>
+    <ProjectGuid>{29437f3f-c7d7-41db-be9b-bf3372064836}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
@@ -56,11 +56,5 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Scripts" />
-    <Folder Include="Profiles" />
-    <Folder Include="Tables" />
-    <Folder Include="StoredProcedure" />
-    <Folder Include="DataSeed" />
-    <Folder Include="DataSeed\PostDeployment" />
   </ItemGroup>
 </Project>
