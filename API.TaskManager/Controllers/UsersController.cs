@@ -16,7 +16,7 @@ namespace API.TaskManager.Controllers
         _usersRepository = usersRepository;
     }
 
-    // GET: api/Users
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
     {
@@ -24,7 +24,7 @@ namespace API.TaskManager.Controllers
         return Ok(users);
     }
 
-    // GET: api/Users/5
+
     [HttpGet("{id}")]
     public async Task<ActionResult<Users>> GetUser(Guid id)
     {
@@ -36,7 +36,7 @@ namespace API.TaskManager.Controllers
         return Ok(user);
     }
 
-    // POST: api/Users
+
     [HttpPost]
     public async Task<ActionResult<Users>> CreateUser(Users user)
     {
@@ -44,7 +44,7 @@ namespace API.TaskManager.Controllers
         return CreatedAtAction("GetUser", new { id = user.Id_User }, user);
     }
 
-    // PUT: api/Users/5
+
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateUser(Guid id, Users user)
     {
@@ -57,7 +57,7 @@ namespace API.TaskManager.Controllers
         return NoContent();
     }
 
-    // DELETE: api/Users/5
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteUser(Guid id)
     {
