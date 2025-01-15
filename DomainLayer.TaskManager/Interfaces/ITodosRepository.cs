@@ -15,7 +15,7 @@ namespace DomainLayer.TaskManager.Interfaces
         /// </summary>
         /// <param name="id">The unique identifier of the task.</param>
         /// <returns>The task with the specified ID, or null if not found.</returns>
-        Task<Todos> GetTodoByIdAsync(Guid id);
+        Task<Todos?> GetTodoByIdAsync(Guid id);
 
         /// <summary>
         /// Adds a new task (todo).
