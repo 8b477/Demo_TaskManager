@@ -3,7 +3,7 @@ using DomainLayer.TaskManager.Entities;
 
 namespace DomainLayer.TaskManager.Interfaces
 {
-    public interface IRoles
+    public interface IRolesRepository
     {
         /// <summary>
         /// Retrieves all roles.

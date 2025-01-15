@@ -4,7 +4,7 @@ using DomainLayer.TaskManager.Entities;
 
 namespace DomainLayer.TaskManager.Interfaces
 {
-    public interface ITodoStatus
+    public interface ITodoStatusRepository
     {
         /// <summary>
         /// Retrieves all todo statuses.
