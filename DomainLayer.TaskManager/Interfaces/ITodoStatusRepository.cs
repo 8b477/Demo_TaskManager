@@ -17,7 +17,7 @@ namespace DomainLayer.TaskManager.Interfaces
         /// </summary>
         /// <param name="id">The unique identifier of the todo status.</param>
         /// <returns>The todo status with the specified ID, or null if not found.</returns>
-        Task<TodoStatus> GetStatusByIdAsync(Guid id);
+        Task<TodoStatus?> GetStatusByIdAsync(Guid id);
 
         /// <summary>
         /// Adds a new todo status.
