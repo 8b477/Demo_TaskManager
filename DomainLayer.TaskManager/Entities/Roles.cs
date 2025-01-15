@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+
 
 namespace DomainLayer.TaskManager.Entities
 {
@@ -12,5 +8,6 @@ namespace DomainLayer.TaskManager.Entities
         [Key]
         public Guid Id_Role { get; set; }
         public string RoleName { get; set; }
+        public ICollection<Users> Users { get; set; } = [];
     }
 }
