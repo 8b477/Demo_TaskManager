@@ -17,7 +17,7 @@ namespace DomainLayer.TaskManager.Interfaces
         /// </summary>
         /// <param name="id">The unique identifier of the user.</param>
         /// <returns>The user that matches the provided ID, or null if not found.</returns>
-        Task<Users> GetUserByIdAsync(Guid id);
+        Task<Users?> GetUserByIdAsync(Guid id);
 
         /// <summary>
         /// Adds a new user to the database.
@@ -45,7 +45,7 @@ namespace DomainLayer.TaskManager.Interfaces
         /// </summary>
         /// <param name="email">The email address of the user.</param>
         /// <returns>The user entity that matches the provided email, or null if not found.</returns>
-        Task<Users> GetUserByEmailAsync(string email);
+        Task<Users?> GetUserByEmailAsync(string email);
 
         /// <summary>
         /// Retrieves all tasks (Todos) associated with a specific user.

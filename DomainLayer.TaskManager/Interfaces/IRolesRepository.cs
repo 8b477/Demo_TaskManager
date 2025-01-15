@@ -3,7 +3,7 @@ using DomainLayer.TaskManager.Entities;
 
 namespace DomainLayer.TaskManager.Interfaces
 {
-    public interface IRoles
+    public interface IRolesRepository
     {
         /// <summary>
         /// Retrieves all roles.
@@ -16,7 +16,7 @@ namespace DomainLayer.TaskManager.Interfaces
         /// </summary>
         /// <param name="id">The unique identifier of the role.</param>
         /// <returns>The role with the specified ID, or null if not found.</returns>
-        Task<Roles> GetRoleByIdAsync(Guid id);
+        Task<Roles?> GetRoleByIdAsync(Guid id);
 
         /// <summary>
         /// Adds a new role.
