@@ -5,5 +5,6 @@ namespace DomainLayer.TaskManager.Entities
     {
         public Guid Id_TodoStatus { get; set; }
         public string TodoStatusName { get; set; }
+        public ICollection<Todos> Todos { get; set; } = [];
     }
 }
