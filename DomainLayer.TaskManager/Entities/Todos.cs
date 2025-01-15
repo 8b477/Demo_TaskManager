@@ -11,7 +11,7 @@ namespace DomainLayer.TaskManager.Entities
         public DateTime TodoFinishedAt { get; set; }
         public bool TodoIsClosed { get; set; }
         public bool TodoPriority { get; set; }
-        //public TodoStatus Status { get; set; }
-        public Users FK_User { get; set; }
+        public TodoStatus Status { get; set; }
+        public Users User { get; set; }
     }
 }
