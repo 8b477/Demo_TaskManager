@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+
 
 namespace DomainLayer.TaskManager.Entities
 {
@@ -16,5 +12,6 @@ namespace DomainLayer.TaskManager.Entities
         public string PasswordHash { get; set; }
         public Guid FK_Role { get; set; }
         public Roles Role { get; set; }
+        public ICollection<Todos> Todos { get; set; }
     }
 }
