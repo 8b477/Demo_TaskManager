@@ -1,5 +1,7 @@
 ﻿using DomainLayer.TaskManager.Entities;
 
+using InfrastructureLayer.TaskManager.Context.Configurations;
+
 using Microsoft.EntityFrameworkCore;
 
 
@@ -14,5 +16,13 @@ namespace InfrastructureLayer.TaskManager.Context
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Todos> Todos { get; set; }
         public DbSet<TodoStatus> TodoStatuses { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
+            modelBuilder.ApplyConfiguration(new TodoStatusConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new TodoConfiguration());
+        }
     }
 }
