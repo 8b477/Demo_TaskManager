@@ -15,7 +15,7 @@ namespace InfrastructureLayer.TaskManager.Context
         public DbSet<Users> Users { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Todos> Todos { get; set; }
-        public DbSet<TodoStatus> TodoStatuses { get; set; }
+        public DbSet<TodoStatus> TodoStatus { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
