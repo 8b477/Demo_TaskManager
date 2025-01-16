@@ -1,4 +1,6 @@
-﻿using DomainLayer.TaskManager.Entities;
+﻿using ApplicationLayer.TaskManager.DTOs;
+
+using DomainLayer.TaskManager.Entities;
 using DomainLayer.TaskManager.Interfaces;
 
 using Microsoft.AspNetCore.Mvc;
@@ -38,7 +40,7 @@ namespace API.TaskManager.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult<Users>> CreateUser(Users user)
+        public async Task<ActionResult<Users>> CreateUser(UserCreateDTO user)
         {
             await _usersRepository.AddUserAsync(user);
             return CreatedAtAction("GetUser", new { id = user.Id_User }, user);

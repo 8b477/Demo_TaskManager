@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationLayer.TaskManager\ApplicationLayer.TaskManager.csproj" />
     <ProjectReference Include="..\DomainLayer.TaskManager\DomainLayer.TaskManager.csproj" />
     <ProjectReference Include="..\InfrastructureLayer.TaskManager\InfrastructureLayer.TaskManager.csproj" />
   </ItemGroup>
