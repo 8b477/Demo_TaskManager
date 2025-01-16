@@ -42,3 +42,13 @@
 |---------|--------|---------|
 | `Secure` | Security enhancements | `Secure - Auth: Add password encryption` |
 | `Auth` | Authentication changes | `Auth - Jwt: Implement token refresh` |
+
+-------
+
+# Schema DB
+
+## Schema entity association
+![schema-EA](https://github.com/8b477/Demo_TaskManager/blob/master/SQLServer.Database/Schema/DB_Schema_EA.png) 
+
+## Schema MLD
+![schema-MLD](https://github.com/8b477/Demo_TaskManager/blob/master/SQLServer.Database/Schema/DB_Schema_MLD.png) 
