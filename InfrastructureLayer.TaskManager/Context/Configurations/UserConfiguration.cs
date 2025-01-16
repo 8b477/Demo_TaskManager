@@ -26,10 +26,6 @@ namespace InfrastructureLayer.TaskManager.Context.Configurations
             builder.HasIndex(u => u.Email)
                 .IsUnique();
 
-            builder.HasOne(u => u.Role)
-                .WithMany(r => r.Users)
-                .HasForeignKey(u => u.FK_Role)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
