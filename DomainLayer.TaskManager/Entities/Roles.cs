@@ -8,6 +8,5 @@ namespace DomainLayer.TaskManager.Entities
         [Key]
         public Guid Id_Role { get; set; }
         public string RoleName { get; set; }
-        public ICollection<Users> Users { get; set; } = [];
     }
 }
