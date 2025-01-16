@@ -1,3 +1,5 @@
+using API.TaskManager.DependencyManager;
+
 using InfrastructureLayer.TaskManager.Context;
 
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +21,7 @@ builder.Services.AddDbContext<TaskManagerDbContext>(options =>
 
 
 //// DEPENDENCY INJECTION
-//DependencyInjectionManager.AddDependency(builder.Services);
+builder.Services.AddDependency();
 //// --------------------
 
 var app = builder.Build();
