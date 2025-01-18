@@ -12,4 +12,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DomainLayer.TaskManager\DomainLayer.TaskManager.csproj" />
+  </ItemGroup>
+
 </Project>
