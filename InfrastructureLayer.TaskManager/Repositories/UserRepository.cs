@@ -28,7 +28,13 @@ namespace InfrastructureLayer.TaskManager.Repositories
 
         public async Task AddUserAsync(Users user)
         {
+            var defaultRole = await _context.Roles.FirstOrDefaultAsync(x => x.RoleName == "User")
+                              ?? throw new ArgumentNullException();
+
+            user.Role = defaultRole;
+
             await _context.Users.AddAsync(user);
+
             await _context.SaveChangesAsync();
         }
 
