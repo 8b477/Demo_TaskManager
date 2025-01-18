@@ -2,6 +2,8 @@
 using DomainLayer.TaskManager.Interfaces;
 
 using InfrastructureLayer.TaskManager.Context;
+using InfrastructureLayer.TaskManager.Errors;
+
 using Microsoft.EntityFrameworkCore;
 
 
@@ -29,7 +31,7 @@ namespace InfrastructureLayer.TaskManager.Repositories
         public async Task AddUserAsync(Users user)
         {
             var defaultRole = await _context.Roles.FirstOrDefaultAsync(x => x.RoleName == "User")
-                              ?? throw new ArgumentNullException();
+                              ?? throw new ArgumentNullException(ErrorResponse.NotFound());
 
             user.Role = defaultRole;
 
