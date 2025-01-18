@@ -1,4 +1,5 @@
 ﻿using ApplicationLayer.TaskManager.DTOs;
+using ApplicationLayer.TaskManager.Mappers;
 
 using DomainLayer.TaskManager.Entities;
 using DomainLayer.TaskManager.Interfaces;
@@ -42,8 +43,9 @@ namespace API.TaskManager.Controllers
         [HttpPost]
         public async Task<ActionResult<Users>> CreateUser(UserCreateDTO user)
         {
-            await _usersRepository.AddUserAsync(user);
-            return CreatedAtAction("GetUser", new { id = user.Id_User }, user);
+            var userToAdd = user.ToEntity();
+            await _usersRepository.AddUserAsync(userToAdd);
+            return CreatedAtAction("GetUser", new { id = userToAdd.Id_User }, user);
         }
 
 
