@@ -6,7 +6,7 @@
   
 # <h1>SUMMARY</h1> 
 
-| <h2>**[Presentation](#presentation)**</h2> | <h2>**[Git Commit KeyWords](#kword)**</h2> | <h2>**[Schema DB](#schema)**</h2> |
+| <h2>**➡️[Presentation](#presentation)**</h2> | <h2>**➡️[Git Commit KeyWords](#kword)**</h2> | <h2>**➡️[Schema DB](#schema)**</h2> |
 |:---:|:---:|:---:|
 
 </div>
