@@ -12,6 +12,8 @@
 ------------
 ------------ 
 
+<br>
+
 # <a name="presentation"> 🚀 MVP Development: Clean Architecture API with Frontend <a/>
 
 ## 🎯 Project Objectives
@@ -62,7 +64,12 @@ This project aims to develop a Minimum Viable Product (MVP) with a robust backen
 - 🔐 Implement robust security measures
 - 🧩 Develop a modular and reusable frontend
 
+  <br>
+  
 ------------
+------------ 
+
+<br>
 
 # <a name="kword"> Git Commit Keywords</a>
 
@@ -109,7 +116,12 @@ This project aims to develop a Minimum Viable Product (MVP) with a robust backen
 | `Secure` | Security enhancements | `Secure - Auth: Add password encryption` |
 | `Auth` | Authentication changes | `Auth - Jwt: Implement token refresh` |
 
--------
+  <br>
+  
+------------
+------------ 
+
+<br>
 
 # <a name="schema">Schema DB</a>
 
@@ -118,3 +130,10 @@ This project aims to develop a Minimum Viable Product (MVP) with a robust backen
 
 ## Schema MLD
 ![schema-MLD](https://github.com/8b477/Demo_TaskManager/blob/master/SQLServer.Database/Schema/DB_Schema_MLD.png) 
+
+  <br>
+  
+------------
+------------ 
+
+<br>
