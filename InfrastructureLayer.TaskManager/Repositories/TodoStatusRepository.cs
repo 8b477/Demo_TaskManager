@@ -10,13 +10,34 @@ namespace InfrastructureLayer.TaskManager.Repositories
 {
     public class TodoStatusRepository : ITodoStatusRepository
     {
+
+        // <--------------------------------> TODO <-------------------------------->
+        // 
+        // <--------------------------------> **** <-------------------------------->
+
+
+        #region <-------------> DEPENDENCY <------------->
         private readonly TaskManagerDbContext _context;
 
         public TodoStatusRepository(TaskManagerDbContext context)
         {
             _context = context;
         }
+        #endregion
 
+
+
+        #region <-------------> CREATE <------------->
+        public async Task AddStatusAsync(TodoStatus status)
+        {
+            await _context.TodoStatus.AddAsync(status);
+            await _context.SaveChangesAsync();
+        }
+        #endregion
+
+
+
+        #region <-------------> GET <------------->
         public async Task<IEnumerable<TodoStatus>> GetAllStatusesAsync()
         {
             return await _context.TodoStatus.ToListAsync();
@@ -26,19 +47,21 @@ namespace InfrastructureLayer.TaskManager.Repositories
         {
             return await _context.TodoStatus.FindAsync(id);
         }
+        #endregion
 
-        public async Task AddStatusAsync(TodoStatus status)
-        {
-            await _context.TodoStatus.AddAsync(status);
-            await _context.SaveChangesAsync();
-        }
 
+
+        #region <-------------> UPDATE <------------->
         public async Task UpdateStatusAsync(TodoStatus status)
         {
             _context.TodoStatus.Update(status);
             await _context.SaveChangesAsync();
         }
+        #endregion
 
+
+
+        #region <-------------> DELETE <------------->
         public async Task DeleteStatusAsync(Guid id)
         {
             var status = await GetStatusByIdAsync(id);
@@ -48,5 +71,13 @@ namespace InfrastructureLayer.TaskManager.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+        #endregion
+
+
+
+        #region <-------------> TOOLS <------------->
+
+        #endregion
+
     }
 }
