@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DomainLayer.TaskManager\DomainLayer.TaskManager.csproj" />
+    <ProjectReference Include="..\InfrastructureLayer.TaskManager\InfrastructureLayer.TaskManager.csproj" />
   </ItemGroup>
 
 </Project>

@@ -38,5 +38,11 @@ namespace DomainLayer.TaskManager.Interfaces
         /// <param name="id">The unique identifier of the role to delete.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         Task DeleteRoleAsync(Guid id);
+
+        /// <summary>
+        /// Retrieves the default identifier for User role.
+        /// </summary>
+        /// <returns>The Role corresponding to a new User, or null if not found.</returns>
+        Task<Roles?> GetDefaultUserRole();
     }
 }
