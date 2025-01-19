@@ -1,6 +1,7 @@
 -----------
 -----------
 <br> 
+<a name="top"<a/>
 <div align="center">
   
 # <h1>SUMMARY</h1> 
@@ -69,8 +70,13 @@ This project aims to develop a Minimum Viable Product (MVP) with a robust backen
 - 🔐 Implement robust security measures
 - 🧩 Develop a modular and reusable frontend
 
-  <br>
+<br>
+<div align="center"> 
   
+[⬆️⬆️ BACK TO TOP ⬆️⬆️](#top) 
+
+</div>
+
 ------------
 ------------ 
 
@@ -121,8 +127,13 @@ This project aims to develop a Minimum Viable Product (MVP) with a robust backen
 | `Secure` | Security enhancements | `Secure - Auth: Add password encryption` |
 | `Auth` | Authentication changes | `Auth - Jwt: Implement token refresh` |
 
-  <br>
+<br>
+<div align="center"> 
   
+[⬆️⬆️ BACK TO TOP ⬆️⬆️](#top) 
+
+</div>
+
 ------------
 ------------ 
 
@@ -136,9 +147,15 @@ This project aims to develop a Minimum Viable Product (MVP) with a robust backen
 ## Schema MLD
 ![schema-MLD](https://github.com/8b477/Demo_TaskManager/blob/master/SQLServer.Database/Schema/DB_Schema_MLD.png) 
 
-  <br>
+<br>
+<div align="center"> 
   
+[⬆️⬆️ BACK TO TOP ⬆️⬆️](#top) 
+
+</div>
+
 ------------
+------------ 
 ------------ 
 
 <br>
